@@ -405,3 +405,26 @@ footer img{
 		margin-top: -10%;
 	}
 }
+@media only screen and (min-width: 375px) {
+	.inbi{
+		top: 128px;
+	}	
+	.xiangin{
+		top: 204px;
+	}
+}
+@media only screen and (min-width: 414px) {
+	.inbi{
+		top: 140px;
+		font-size: 38px;
+	}	
+	.xiangin{
+		top: 230px;
+	}
+	.xiangin p:nth-child(1){
+		font-size: 22px;
+	}
+	.xiangin p:nth-child(2){
+		font-size: 28px;
+	}
+}
