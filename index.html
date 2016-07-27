@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
+
 	<body>
 		<div class="wrap">
 			<div class="content">
-				<img src="img/logotop.png"/>
+				<img src="img/logotop.png" />
 				<div class="hb">
 					<div class="head">
-						
+						<img src="" />
 					</div>
 					<div class="hongb">
-						<img src="img/hongb.png"/>
+						<img src="img/hongb.png" />
 						<div class="inbi">
 							<p><span id="number">560</span>IN币</p>
 						</div>
@@ -23,8 +27,8 @@
 							<p id="cname">戴博雅</p>
 							<p>邀请您加入享IN</p>
 						</div>
-					</div>					
-				</div>	
+					</div>
+				</div>
 				<div class="accept">
 					<a href="###" class="accepta">接受邀请</a>
 				</div>
@@ -33,10 +37,10 @@
 				<div class="mask_content">
 					<div class="mask_close">
 						<div class="mclose">
-							<div class="close_x"><img src="img/xx.png"/></div>
+							<div class="close_x"><img src="img/xx.png" /></div>
 							<div class="close_xx"></div>
 						</div>
-						
+
 					</div>
 					<div class="maskf">
 						<div class="maskftop">
@@ -53,16 +57,16 @@
 				<div class="hmask_content">
 					<div class="mask_close">
 						<div class="mclose">
-							<div class="close_x"><img src="img/xx.png"/></div>
+							<div class="close_x"><img src="img/xx.png" /></div>
 							<div class="close_xx"></div>
 						</div>
-						
+
 					</div>
 					<div class="maskf">
 						<div class="maskftop">
 							<p>提交手机号后</p>
 							<p>IN币将自动放入您的手机账号中</p>
-							<p class="insetall"><input type="text" name="insetphone" id="insetphone" class="insetphone" placeholder="输入手机号"/></p>
+							<p class="insetall"><input type="text" name="insetphone" id="insetphone" class="insetphone" placeholder="输入手机号" /></p>
 							<p class="insetall"><input type="text" name="insetnum" id="insetnum" class="insetnum" placeholder="输入验证码" /><input type="button" id="getnum" class="getnum" name="getnum" value="获取验证码" /></p>
 						</div>
 						<div class="maskfbottom getin">
@@ -73,19 +77,19 @@
 			</div>
 			<div class="down_main">
 				<div class="down_top">
-					<img src="img/in1.png"/>
+					<img src="img/in1.png" />
 					<p id="agency_down">代理人端下载</p>
 				</div>
 				<div class="down_center">
-					<img src="img/xin.png"/>
+					<img src="img/xin.png" />
 				</div>
 				<div class="down_bottom">
-					<img src="img/in2.png"/>
+					<img src="img/in2.png" />
 					<p id="client_down">客户端下载</p>
 				</div>
 			</div>
 			<footer>
-				<img src="img/in1.png"/><img src="img/in2.png"/>
+				<img src="img/in1.png" /><img src="img/in2.png" />
 				<div class="footer_in">
 					<p>享IN</p>
 					<p>一个有享法的人脉圈</p>
@@ -95,39 +99,52 @@
 		</div>
 	</body>
 	<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script type="text/javascript" src="pageResponse.min.js"></script>
 	<script type="text/javascript">
-		$(".close_x").on("touchstart",function(){
-		  	$(".hmask").hide();
+		window.onload = window.onresize = function() {
+			pageResponse({
+				selectors: '.wrap', 
+				mode: 'auto', 
+				width: '320', 
+				height: '504' 
+			})
+		}
+		$("footer").css("position","fixed");
+	</script>-->
+	<script type="text/javascript">
+		$(".close_x").on("touchstart", function() {
+			$(".hmask").hide();
 		});
-		$(".close_x").on("touchstart",function(){
-		  	$(".mask").hide();
+		$(".close_x").on("touchstart", function() {
+			$(".mask").hide();
 		});
-		$(".accept").on("touchstart",function(){
+		$(".accept").on("touchstart", function() {
 			$(".hmask").show();
-		});	
-		$("#download").on("touchstart",function(){
+		});
+		$("#download").on("touchstart", function() {
 			$(".mask").hide();
 			$("footer").hide();
 			$(".content").hide();
-			$(".down_main").show();	
+			$(".down_main").show();
 		});
-		var reg = /(1[3-9]\d{9}$)/;	
-		$(".getnum").on("touchstart",function(){
-			if(!reg.test($(".insetphone").val())){
+		var reg = /(1[3-9]\d{9}$)/;
+		$(".getnum").on("touchstart", function() {
+			if(!reg.test($(".insetphone").val())) {
 				alert("请输入正确的手机号！");
 				return false;
 			}
 		});
-		$(".getin").on("touchstart",function(){
-			if($(".insetphone").val() == "" || $(".insetnum").val() == ""){
+		$(".getin").on("touchstart", function() {
+			if($(".insetphone").val() == "" || $(".insetnum").val() == "") {
 				alert('手机号或验证码不能为空！')
-			}else if(!reg.test($(".insetphone").val())){
+			} else if(!reg.test($(".insetphone").val())) {
 				alert("请输入正确的手机号！");
 				return false;
-			}else{
+			} else {
 				$(".mask").show();
 				$(".hmask").hide();
 			}
-		});		
+		});
 	</script>
+
 </html>
