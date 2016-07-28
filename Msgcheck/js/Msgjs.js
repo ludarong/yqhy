@@ -35,13 +35,28 @@ $(function() {
 	identitymask.on('touchstart', function() {
 		identitymask.hide();
 	});
+	var reg = /([1-6]\d{5}(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])\d{3}[0-9xX])|([1-6]\d{5}\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])\d{3})/;
 	$('.next').eq(0).on('touchstart', function() {
-		$('.wrap').hide();
-		$('.wrap').eq(1).show();
+		if(reg.test($('.idenid').val())){
+			$('.wrap').hide();
+			$('.wrap').eq(1).show();
+		}else if($('.idenid').val() == '' || $('.username').val() == ''){
+			alert('姓名或身份证不能为空！');
+		}else{
+			alert('身份证号码有误！');
+		}
 	});
 	$('.next').eq(1).on('touchstart', function() {
-		$('.wrap').hide();
-		$('.wrap').eq(2).show();
+		if($('.zyid').val() == '' || $('.username').val() == ''){
+			alert('姓名或身份证不能为空！');
+		}else{
+			$('.wrap').hide();
+			$('.wrap').eq(2).show();
+		}		
 	});
-	
+	$('.next').eq(2).on('touchstart', function() {
+		if($('.username').val() == ''){
+			alert('姓名不能为空！');
+		}
+	});
 });
