@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/Msgcss.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="Mytop">
+				<img src="img/topbg.png"/>
+			</div>
+			<div class="Myname">
+				<p>真实姓名</p>
+				<div><input type="text" placeholder="请输入真实姓名" /></div>
+				<p>身份证验证</p>
+				<div>
+					<input type="text" placeholder="请输入身份证号码" />
+					<div class="prompt maskiden_show"><img src="img/prompt.png"/></div>
+				</div>
+			</div>
+			<div class="Myimg">
+				<div type="button" onclick="front.click()" class="upflie front_upflie"></div>  
+				<input type="file" id="front" style="display:none">
+				<div type="button" onclick="verso.click()" class="upflie verso_upflie"></div>  
+				<input type="file" id="verso" style="display:none">
+				<div class="frontimg">
+					<img id="frontimg" border="0">
+				</div>
+				<div class="versoimg">
+					<img id="versoimg" border="0">
+				</div>
+			</div>
+			<div class="next">下一步</div>
+			<p class="Promsg">享IN对您提供的个人信息将严格保密。对于您的个人信息，我们仅于平台身份验证时使用。</p>
+			<div class="identity_mask">
+				<p>正面身份证</p>
+				<div class="mask_img"><img src="img/frontimg.jpg"/></div>
+				<p>反面身份证</p>
+				<div class="mask_img"><img src="img/varsoimg.jpg"/></div>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="Mytop">
+				<img src="img/topbg2.png"/>
+			</div>
+			<div class="Myname">
+				<p>真实姓名</p>
+				<div><input type="text" placeholder="请输入真实姓名" /></div>
+				<p>执业证验证</p>
+				<div>
+					<input type="text" placeholder="请输入执业证号码" />
+				</div>
+			</div>
+			<div class="next">下一步</div>
+			<p class="Promsg">在如下情况下，享IN可能会披露您的信息： </p>
+			<p class="Promsg">1.事先获得您的授权；</p>
+			<p class="Promsg">2.根据法律法规或法律程序的要求；</p>
+			<p class="Promsg">3.依据政府部门的强制性</p>
+			<p class="Promsg">4.以学术研究或公共利益为目的；</p>
+			<p class="Promsg">5.为维护享IN的合法权益，例如：查找、预防、处理欺诈或安全方面的问题；</p>
+			<p class="Promsg">6.符合相关服务条款或使用协议的规定。</p>
+		</div>
+		<div class="wrap">
+			<div class="Mytop">
+				<img src="img/topbg3.png"/>
+			</div>
+			<div class="Myname">
+				<p>真实姓名</p>
+				<div><input type="text" placeholder="请输入真实姓名" /></div>
+				<p>资格证验证</p>
+				<div>
+					<input type="text" placeholder="请输入资格证号码（可不填）" />
+					<div class="prompt masksen_show"><img src="img/prompt.png"/></div>
+				</div>
+			</div>
+			<div class="Myimg">
+				<div onclick="certpaper.click()" class="upflie certpaper"></div>
+				<div class="paperimg">
+					<img id="preimg" border="0">
+				</div>
+				<input type="file" id="certpaper" style="display:none">
+			</div>
+			<div class="next">完成</div>
+			<div class="seniority_mask">
+				<p>正面身份证</p>
+				<div class="mask_img"><img src="img/frontimg.jpg"/></div>
+				<p>反面身份证</p>
+				<div class="mask_img"><img src="img/varsoimg.jpg"/></div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Msgjs.js" type="text/javascript" charset="utf-8"></script>
+</html>

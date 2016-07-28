@@ -320,15 +320,6 @@ footer img{
 	background-color: #ff5f6f;
 }
 
-
-@media only screen and (min-width: 375px) {
-	.inbi{
-		top: 128px;
-	}	
-	.xiangin{
-		top: 204px;
-	}
-}
 @media only screen and (min-width: 360px) {
 	.inbi{
 		top: 118px;
@@ -337,6 +328,15 @@ footer img{
 		top: 198px;
 	}
 }
+@media only screen and (min-width: 375px) {
+	.inbi{
+		top: 128px;
+	}	
+	.xiangin{
+		top: 204px;
+	}
+}
+
 
 @media only screen and (min-width: 412px) {
 	.inbi{

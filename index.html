@@ -112,37 +112,37 @@
 		$("footer").css("position","fixed");
 	</script>-->
 	<script type="text/javascript">
-		$(".close_x").on("touchstart", function() {
+		$('.close_x').on('touchstart', function() {
 			$(".hmask").hide();
 		});
-		$(".close_x").on("touchstart", function() {
+		$('.close_x').on('touchstart', function() {
 			$(".mask").hide();
 		});
-		$(".accept").on("touchstart", function() {
+		$('.accept').on('touchstart', function() {
 			$(".hmask").show();
 		});
-		$("#download").on("touchstart", function() {
-			$(".mask").hide();
-			$("footer").hide();
-			$(".content").hide();
-			$(".down_main").show();
+		$('#download').on('touchstart', function() {
+			$('.mask').hide();
+			$('footer').hide();
+			$('.content').hide();
+			$('.down_main').show();
 		});
 		var reg = /(1[3-9]\d{9}$)/;
-		$(".getnum").on("touchstart", function() {
+		$('.getnum').on('touchstart', function() {
 			if(!reg.test($(".insetphone").val())) {
 				alert("请输入正确的手机号！");
 				return false;
 			}
 		});
-		$(".getin").on("touchstart", function() {
-			if($(".insetphone").val() == "" || $(".insetnum").val() == "") {
+		$('.getin').on('touchstart', function() {
+			if($('.insetphone').val() == "" || $('.insetnum').val() == "") {
 				alert('手机号或验证码不能为空！')
-			} else if(!reg.test($(".insetphone").val())) {
+			} else if(!reg.test($('.insetphone').val())) {
 				alert("请输入正确的手机号！");
 				return false;
 			} else {
-				$(".mask").show();
-				$(".hmask").hide();
+				$('.mask').show();
+				$('.hmask').hide();
 			}
 		});
 	</script>
