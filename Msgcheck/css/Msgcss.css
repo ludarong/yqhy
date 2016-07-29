@@ -102,6 +102,7 @@ input[type="reset"] {
 
 .Myname div .prompt img {
 	width: 100%;
+	z-index: 1000;
 }
 
 .Myname input {
@@ -203,7 +204,9 @@ input[type="reset"] {
 	padding: 2rem 0;
 	display: none;
 }
-
+.seniority_mask{
+	padding-top: 16rem;
+}
 .identity_mask p,
 .seniority_mask p {
 	font-size: 1.6rem;
