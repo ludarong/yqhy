@@ -129,7 +129,12 @@ input[type="reset"] {
 	z-index: 11;
 	display: inline-block;
 }
-
+.Myimg .upflie img{
+	width: 80%;
+	position: relative;
+	left: 11%;
+	top: 11%;
+}
 .Myimg .paperimg,
 .Myimg .frontimg {
 	width: 4.4rem;
@@ -217,7 +222,6 @@ input[type="reset"] {
 .seniority_mask .mask_img img {
 	width: 100%;
 }
-
 
 /*# sourceMappingURL=Msgcss.css.map */
 
